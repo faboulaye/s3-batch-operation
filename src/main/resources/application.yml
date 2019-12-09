@@ -1,0 +1,9 @@
+app:
+  aws:
+    accountId: "xxxxxxxxxx"
+    batch-operation:
+      role: "arn:aws:iam::${app.aws.accountId}:role/s3-batch-operation"
+      bucket:
+        report: "arn:aws:s3:::batch-report-operation"
+        source: "arn:aws:s3:::batch-source-operation"
+        target: "arn:aws:s3:::batch-target-operation"
